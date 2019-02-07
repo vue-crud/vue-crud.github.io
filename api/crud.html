@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CRUD | Vue CRUD</title>
+    <meta name="description" content="Vue.js based REST-ful CRUD application">
+    <link rel="icon" href="/images/icon/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.e001c901.css" as="style"><link rel="preload" href="/assets/js/app.dc155183.js" as="script"><link rel="preload" href="/assets/js/5.a132bf90.js" as="script"><link rel="prefetch" href="/assets/js/10.a586d08a.js"><link rel="prefetch" href="/assets/js/11.8d2cd836.js"><link rel="prefetch" href="/assets/js/12.b660930d.js"><link rel="prefetch" href="/assets/js/13.fae6c506.js"><link rel="prefetch" href="/assets/js/14.ed055141.js"><link rel="prefetch" href="/assets/js/15.641967f5.js"><link rel="prefetch" href="/assets/js/16.adcbbff8.js"><link rel="prefetch" href="/assets/js/17.acabfb5f.js"><link rel="prefetch" href="/assets/js/18.7f776211.js"><link rel="prefetch" href="/assets/js/19.d6e5b4e2.js"><link rel="prefetch" href="/assets/js/2.492855a4.js"><link rel="prefetch" href="/assets/js/20.64aaabbd.js"><link rel="prefetch" href="/assets/js/21.ae534d20.js"><link rel="prefetch" href="/assets/js/3.8256c7f6.js"><link rel="prefetch" href="/assets/js/4.52fec645.js"><link rel="prefetch" href="/assets/js/6.f5dd8b7b.js"><link rel="prefetch" href="/assets/js/7.d4355b5c.js"><link rel="prefetch" href="/assets/js/8.6e2cae3b.js"><link rel="prefetch" href="/assets/js/9.e0bfdcc6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e001c901.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo/vue-crud-sm.png" alt="Vue CRUD" class="logo"> <span class="site-name can-hide">Vue CRUD</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/essentials/introduction.html" class="nav-link">Guide</a></div><div class="nav-item"><a href="/api/getting-started.html" class="nav-link">API</a></div><div class="nav-item"><a href="/guide/essentials/introduction.html#demo-version" class="nav-link">Demo</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Ecosystem</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuetifyjs.com/en/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuetify
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Laravel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://github.com/szczepanmasny/vue-crud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/essentials/introduction.html" class="nav-link">Guide</a></div><div class="nav-item"><a href="/api/getting-started.html" class="nav-link">API</a></div><div class="nav-item"><a href="/guide/essentials/introduction.html#demo-version" class="nav-link">Demo</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Ecosystem</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuetifyjs.com/en/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuetify
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Laravel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://github.com/szczepanmasny/vue-crud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>API</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/api/getting-started.html" class="sidebar-link">Getting started</a></li><li><a href="/api/authentication.html" class="sidebar-link">Authentication</a></li><li><a href="/api/profile.html" class="sidebar-link">Profile</a></li><li><a href="/api/crud.html" class="active sidebar-link">CRUD</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api/crud.html#basics" class="sidebar-link">Basics</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#get-table-data" class="sidebar-link">Get table data</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#get-selected-item" class="sidebar-link">Get selected item</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#store-item" class="sidebar-link">Store item</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#update-item" class="sidebar-link">Update item</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#delete-item" class="sidebar-link">Delete item</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#get-paginated-data-large-tables" class="sidebar-link">Get paginated data (large tables)</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#update-many-items" class="sidebar-link">Update many items</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#delete-many-items" class="sidebar-link">Delete many items</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#add-many-connections-in-junction-table" class="sidebar-link">Add many connections in junction table</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#upload-file" class="sidebar-link">Upload file</a></li><li class="sidebar-sub-header"><a href="/api/crud.html#custom-request" class="sidebar-link">Custom request</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="crud"><a href="#crud" aria-hidden="true" class="header-anchor">#</a> CRUD</h1> <h2 id="basics"><a href="#basics" aria-hidden="true" class="header-anchor">#</a> Basics</h2> <p>The main element of Vue CRUD is the table management system. This system works in such a way that on the client's side a route is defined for communication with the API, as well as a list of fields in a given table, including information on whether the field should be displayed in the table, whether it is editable, whether it is required, what type it is (text, number, foreign key, etc.), what column in the database it refers to, etc.</p> <p>Each table must be assigned to a specific module (middleware). Therefore, the paths to resources associated with individual tables look like:</p> <p><strong><a href="/api/getting-started.html">*</a>/<code>module</code>/<code>table</code></strong></p> <p><code>module</code> - module designation (slugified),
+<code>table</code> - table designation (slugified)</p> <p>According to the REST rules, the API should be structured as follows:</p> <table><thead><tr><th>METHOD</th> <th>ADDRESS</th> <th>RESOURCE</th></tr></thead> <tbody><tr><td>GET</td> <td></td> <td>get table data</td></tr> <tr><td>GET</td> <td>./{id}</td> <td>get {id} record details</td></tr> <tr><td>PUT</td> <td>./{id}</td> <td>edit {id} record</td></tr> <tr><td>POST</td> <td></td> <td>store new record</td></tr> <tr><td>DELETE</td> <td>./{id}</td> <td>delete {id} record</td></tr></tbody></table> <p>In addition, the following methods are provided:</p> <p>According to the REST rules, the API should be structured as follows:</p> <table><thead><tr><th>METHOD</th> <th>ADDRESS</th> <th>RESOURCE</th></tr></thead> <tbody><tr><td>POST</td> <td>./multiple-update</td> <td>update selected records</td></tr> <tr><td>POST</td> <td>./multiple-add</td> <td>add some connections to junction table</td></tr> <tr><td>POST</td> <td>./multiple-delete</td> <td>delete selected records</td></tr> <tr><td>POST</td> <td>./search</td> <td>get one page of table data based on the specified sorting, filters, page number, etc.</td></tr></tbody></table> <p><strong>Examples</strong>:</p> <ul><li>Updating user with id 7:
+<code>PUT</code>
+https://your-site.com/api/admin/users/7</li> <li>Get list of posts in CMS module:
+<code>GET</code>
+https://your-site.com/api/cms/posts</li> <li>Store new post category:
+<code>POST</code>
+https://your-site.com/api/cms/categories</li> <li>Delete product 456 in store module:
+<code>DELETE</code>
+https://your-site.com/api/store/products/456</li> <li>Delete few messages from CMS module:
+<code>POST</code>
+https://your-site.com/api/cms/messages/multiple-delete</li></ul> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>Vue CRUD does not limit the user to creating only modules based on a predefined CRUD system, so you can also create your own paths.</p></div> <h2 id="get-table-data"><a href="#get-table-data" aria-hidden="true" class="header-anchor">#</a> Get table data</h2> <p><code>GET</code> <strong><a href="/api/getting-started.html">*</a>/<a href="/api/crud.html" class="router-link-exact-active router-link-active"><code>module</code>/<code>table</code></a></strong></p> <p><strong>Example:</strong> <code>GET</code>
+https://your-site.com/api/admin/users</p> <p><strong>Parameters:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>-</td> <td>-</td> <td>-</td></tr></tbody></table> <p><strong>Success 200:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>-</td> <td>Object []</td> <td>Records list (Table of Objects).</td></tr></tbody></table> <p><strong>Response example:</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">[</span><span class="token punctuation">{</span>
+  <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;User 1&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;user1@demo.com&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2018-02-10 22:21:22&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2019-02-07 11:25:01&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;user_type_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;user_type&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Admin&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;read&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;insert&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;update&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;delete&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;admin&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;User 2&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;user2@demo.com&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2018-12-07 15:15:59&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2018-12-07 15:15:59&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;user_type_id&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;user_type&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;User&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;read&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;insert&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;update&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;delete&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;admin&quot;</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span>
+</code></pre></div><h2 id="get-selected-item"><a href="#get-selected-item" aria-hidden="true" class="header-anchor">#</a> Get selected item</h2> <p><code>GET</code> <strong><a href="/api/getting-started.html">*</a>/<a href="/api/crud.html" class="router-link-exact-active router-link-active"><code>module</code>/<code>table</code></a>/:id</strong></p> <p><strong>Example:</strong> <code>GET</code>
+https://your-site.com/api/admin/users/2</p> <p><strong>Parameters:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>-</td> <td>-</td> <td>-</td></tr></tbody></table> <p><strong>Success 200:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>-</td> <td>Object</td> <td>Object with record fields</td></tr></tbody></table> <p><strong>Response example:</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;User 2&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;user2@demo.com&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2018-12-07 15:15:59&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2018-12-07 15:15:59&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;user_type_id&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="store-item"><a href="#store-item" aria-hidden="true" class="header-anchor">#</a> Store item</h2> <p><code>POST</code> <strong><a href="/api/getting-started.html">*</a>/<a href="/api/crud.html" class="router-link-exact-active router-link-active"><code>module</code>/<code>table</code></a></strong></p> <p><strong>Example:</strong> <code>POST</code>
+https://your-site.com/api/admin/users</p> <p><strong>Parameters:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>-</td> <td>Object</td> <td>Object with record fields</td></tr></tbody></table> <p><strong>Parameters example:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>name: User 3
+email: user3@demo.com
+user_type_id: 3
+</code></pre></div><p><strong>Success 200:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>status</td> <td>Number</td> <td>0 (success) or -1 (validation not passed)</td></tr> <tr><td>msg</td> <td>Object</td> <td>Optional. Reasons of the validation failure</td></tr> <tr><td>id</td> <td>Number/String</td> <td>Optional. Created element's id</td></tr></tbody></table> <p><strong>Response examples:</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;status&quot;</span><span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>or</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;msg&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;The email has already been taken.&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;status&quot;</span><span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="update-item"><a href="#update-item" aria-hidden="true" class="header-anchor">#</a> Update item</h2> <p><code>PUT</code> <strong><a href="/api/getting-started.html">*</a>/<a href="/api/crud.html" class="router-link-exact-active router-link-active"><code>module</code>/<code>table</code></a>/id</strong></p> <p><strong>Example:</strong> <code>PUT</code>
+https://your-site.com/api/admin/users/3</p> <p><strong>Parameters:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>-</td> <td>Object</td> <td>Object fields to be updated</td></tr></tbody></table> <p><strong>Parameters example:</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+name<span class="token punctuation">:</span> User <span class="token number">33</span>
+email<span class="token punctuation">:</span> user3@demo<span class="token punctuation">.</span>com
+user_type_id<span class="token punctuation">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>Success 200:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>status</td> <td>Number</td> <td>0 (success) or -1 (validation not passed)</td></tr> <tr><td>msg</td> <td>Object</td> <td>Optional. Reasons of the validation failure</td></tr> <tr><td>id</td> <td>Number/String</td> <td>Optional. Created element's id</td></tr></tbody></table> <p><strong>Response examples:</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;status&quot;</span><span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>or</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;msg&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;The email has already been taken.&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;status&quot;</span><span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="delete-item"><a href="#delete-item" aria-hidden="true" class="header-anchor">#</a> Delete item</h2> <p><code>DELETE</code> <strong><a href="/api/getting-started.html">*</a>/<a href="/api/crud.html" class="router-link-exact-active router-link-active"><code>module</code>/<code>table</code></a>/id</strong></p> <p><strong>Example:</strong> <code>DELETE</code>
+https://your-site.com/api/admin/users/3</p> <p><strong>Parameters:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>-</td> <td>-</td> <td>-</td></tr></tbody></table> <p><strong>Success 200:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>-</td> <td>-</td> <td>-</td></tr></tbody></table> <h2 id="get-paginated-data-large-tables"><a href="#get-paginated-data-large-tables" aria-hidden="true" class="header-anchor">#</a> Get paginated data (large tables)</h2> <p><code>POST</code> <strong><a href="/api/getting-started.html">*</a>/<a href="/api/crud.html" class="router-link-exact-active router-link-active"><code>module</code>/<code>table</code></a>/search</strong></p> <p><strong>Example:</strong> <code>POST</code>
+https://your-site.com/api/crm/people/search</p> <p><strong>Parameters:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>sortBy</td> <td>String</td> <td>Column name</td></tr> <tr><td>descending</td> <td>Boolean</td> <td>Sorting direction is descending</td></tr> <tr><td>rowsPerPage</td> <td>Number</td> <td>Number of rows per page</td></tr> <tr><td>page</td> <td>Number</td> <td>Page number</td></tr> <tr><td>search</td> <td>String</td> <td>Search phrases (searching in all columns, space should be a delimeter)</td></tr> <tr><td>selectedStatuses</td> <td>Array</td> <td>Selected activity statuses. Array can contain values 0 and 1</td></tr> <tr><td>deleteMode</td> <td>String</td> <td>If equals 'soft', 'both' or 'filter', API should take into account <code>selectedStatuses</code> value</td></tr> <tr><td>activeColumnName</td> <td>String</td> <td>If equals 'soft', 'both' or 'filter', API should use this column name to filter active/inactive records</td></tr> <tr><td>filterColumns</td> <td>Object []</td> <td>Array of Objects</td></tr> <tr><td>      mode</td> <td>string</td> <td>'like', 'equals' or 'list'</td></tr> <tr><td>      text</td> <td>string</td> <td>Field label</td></tr> <tr><td>      name</td> <td>string</td> <td>Column name</td></tr> <tr><td>      value</td> <td>string</td> <td>Field value, nullable</td></tr></tbody></table> <p><strong>Parameters example:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>sortBy: 
+descending: false
+rowsPerPage: 20
+page: 1
+search: Abbott
+filterColumns[0][mode]: like
+filterColumns[0][text]: Id
+filterColumns[0][name]: id
+filterColumns[0][column]: undefined
+filterColumns[0][value]: 
+filterColumns[1][mode]: like
+filterColumns[1][text]: Lastname
+filterColumns[1][name]: lastname
+filterColumns[1][column]: lastname
+filterColumns[1][value]: 
+filterColumns[2][mode]: like
+filterColumns[2][text]: Firstname
+filterColumns[2][name]: firstname
+filterColumns[2][column]: firstname
+filterColumns[2][value]: 
+filterColumns[3][mode]: like
+filterColumns[3][text]: Distinction
+filterColumns[3][name]: distinction
+filterColumns[3][column]: distinction
+filterColumns[3][value]: 
+filterColumns[4][mode]: like
+filterColumns[4][text]: Language
+filterColumns[4][name]: language
+filterColumns[4][column]: language_id
+filterColumns[4][value]: 
+filterColumns[5][mode]: like
+filterColumns[5][text]: Sex
+filterColumns[5][name]: sex
+filterColumns[5][column]: sex_id
+filterColumns[5][value]: 
+filterColumns[6][mode]: like
+filterColumns[6][text]: E-mail
+filterColumns[6][name]: email
+filterColumns[6][column]: email
+filterColumns[6][value]: gmail.com
+filterColumns[7][mode]: like
+filterColumns[7][text]: Phone
+filterColumns[7][name]: phone
+filterColumns[7][column]: phone
+filterColumns[7][value]: 
+selectedStatuses[]: 1
+deleteMode: soft
+activeColumnName: active
+mode: paginate
+</code></pre></div><p><strong>Success 200:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>data</td> <td>Object []</td> <td>List of filtered and paginated items (Array of Objects)</td></tr> <tr><td>total</td> <td>Number</td> <td>Number of total items (if pagination was turned off)</td></tr></tbody></table> <p><strong>Response example:</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;current_page&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;data&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2635</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;firstname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Quincy&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;lastname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Abbott&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;distinction&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Sr.&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sex_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;language_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;layla.wilkinson@gmail.com&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;phone&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;(732) 531-0044&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sexes_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sex&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;M\u0119\u017cczyzna&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;code&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;M&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eng_name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Male&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eng_code&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;M&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;priority&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;languages_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;language&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Angielski&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;priority&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fullname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Abbott Quincy&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">1110</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;firstname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Vicenta&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;lastname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Abbott&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;distinction&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;PhD&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sex_id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;language_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;jmayert@gmail.com&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;phone&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;767-908-9556&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sexes_id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sex&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Kobieta&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;code&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;K&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eng_name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Female&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eng_code&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;F&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;priority&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;languages_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;language&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Angielski&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;priority&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fullname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Abbott Vicenta&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2081</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;firstname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;River&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;lastname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Bogan&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;distinction&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;IV&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sex_id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;language_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;cabbott@gmail.com&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;phone&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;+1-352-613-4426&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sexes_id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sex&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Kobieta&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;code&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;K&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eng_name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Female&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eng_code&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;F&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;priority&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;languages_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;language&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Angielski&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;priority&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fullname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Bogan River&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">557</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;firstname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Sydnee&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;lastname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Romaguera&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;distinction&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Sr.&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sex_id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;language_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;email&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;eabbott@gmail.com&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;phone&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;1-696-966-4145&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sexes_id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;sex&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Kobieta&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;code&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;K&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eng_name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Female&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eng_code&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;F&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;priority&quot;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;languages_id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;language&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Angielski&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;priority&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;active&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;created_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;updated_at&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fullname&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Romaguera Sydnee&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;from&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;last_page&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;next_page_url&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;path&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;http:\/\/127.0.0.1:8000\/api\/crm\/people\/search&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;per_page&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;20&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;prev_page_url&quot;</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;to&quot;</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;total&quot;</span><span class="token punctuation">:</span> <span class="token number">4</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="update-many-items"><a href="#update-many-items" aria-hidden="true" class="header-anchor">#</a> Update many items</h2> <h2 id="delete-many-items"><a href="#delete-many-items" aria-hidden="true" class="header-anchor">#</a> Delete many items</h2> <h2 id="add-many-connections-in-junction-table"><a href="#add-many-connections-in-junction-table" aria-hidden="true" class="header-anchor">#</a> Add many connections in junction table</h2> <h2 id="upload-file"><a href="#upload-file" aria-hidden="true" class="header-anchor">#</a> Upload file</h2> <p><code>POST</code> <strong><a href="/api/getting-started.html">**</a></strong>
+(path to uploading files must be set in config file)</p> <p><strong>Example:</strong> <code>POST</code>
+https://your-site.com/api/files/file-upload</p> <p><strong>Parameters:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>file</td> <td>Binary data</td> <td>File to upload</td></tr> <tr><td>module</td> <td>String</td> <td>current module name</td></tr> <tr><td>table</td> <td>String</td> <td>current table</td></tr> <tr><td>field</td> <td>String</td> <td>field name</td></tr></tbody></table> <p><code>module</code>, <code>table</code> and <code>field</code> values can help to organize files on the storage.</p> <p><strong>Parameters example:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>file: (binary)
+module: crm
+table: company-files
+field: file
+</code></pre></div><p><strong>Success 200:</strong></p> <table><thead><tr><th>Field</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>path</td> <td>String</td> <td>Relative path to file</td></tr> <tr><td>status</td> <td>Number</td> <td>0 (success), -1 (requested module doesn't exist), -2 (access denied or file validation error, e.g. wrong format)</td></tr></tbody></table> <p><strong>Response example:</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  path<span class="token punctuation">:</span> <span class="token string">&quot;files/crm/company-files/file/1549553733000001&quot;</span>
+  status<span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>File must be uploaded with its original name, because CORS doesn't allow file sharing under a different name than the original file name. For this reason, the suggested way to save files is:
+<strong><a href="/api/getting-started.html">**</a>/files/<code>module</code>/<code>table</code>/<code>field</code>/<code>random</code>/<code>filename</code></strong></p> <p><strong>Example:</strong>
+https://your-site.com/api/files/crm/company-files/file/1549553733000001/image.jpg</p></div> <h2 id="custom-request"><a href="#custom-request" aria-hidden="true" class="header-anchor">#</a> Custom request</h2></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/api/profile.html" class="prev">
+          Profile
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.dc155183.js" defer></script><script src="/assets/js/5.a132bf90.js" defer></script>
+  </body>
+</html>

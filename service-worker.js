@@ -21,23 +21,23 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "5c142b59efaa348d30582326beb0d8d4"
+    "revision": "034afdb981776f9fef233ab1c3f83a4f"
   },
   {
-    "url": "api/api/authentication.html",
-    "revision": "cb536dda6460971f676fd797557b4a38"
+    "url": "api/authentication.html",
+    "revision": "3515406e3a435fc64495d58d91b99112"
   },
   {
-    "url": "api/api/crud.html",
-    "revision": "5832e16b0d7a0fae3005377afff11c2a"
+    "url": "api/crud.html",
+    "revision": "772d933bb20c3bef6236bd5d6eb4b517"
   },
   {
-    "url": "api/api/getting-started.html",
-    "revision": "acf8e180dcd2ffa25568d73950e0314f"
+    "url": "api/getting-started.html",
+    "revision": "cc10e56956266eb174b6e5f6a10484d3"
   },
   {
-    "url": "api/api/profile.html",
-    "revision": "84104e396eb24a3e8d3fac9be7f5e918"
+    "url": "api/profile.html",
+    "revision": "c5654b7c4f655d005a6b8f21eedd309e"
   },
   {
     "url": "assets/css/0.styles.e001c901.css",
@@ -104,20 +104,20 @@ self.__precacheManifest = [
     "revision": "a9f4cf4e4876b84d8d39f1bdb5f607a2"
   },
   {
-    "url": "assets/js/4.0342a5ab.js",
-    "revision": "2e0e614cf67f37e02accd373dd8c0978"
+    "url": "assets/js/4.52fec645.js",
+    "revision": "64ce9e3a6c88a7a36f2ee70329e064b8"
   },
   {
-    "url": "assets/js/5.1d71e845.js",
-    "revision": "f281de61fc4dab826480ba888504b815"
+    "url": "assets/js/5.a132bf90.js",
+    "revision": "e41393e516aa954236dfa791a01666d7"
   },
   {
-    "url": "assets/js/6.62deadc1.js",
-    "revision": "f9284dedfd82aff105989d8dcd0b9796"
+    "url": "assets/js/6.f5dd8b7b.js",
+    "revision": "b160ff73b658b75431604c2b2c182ae8"
   },
   {
-    "url": "assets/js/7.050958df.js",
-    "revision": "afeb08f6b7ffa5afd058fbe62d74b8a0"
+    "url": "assets/js/7.d4355b5c.js",
+    "revision": "aad7f3995ed0eac28a05399c35b5a04b"
   },
   {
     "url": "assets/js/8.6e2cae3b.js",
@@ -128,60 +128,60 @@ self.__precacheManifest = [
     "revision": "ae7e607615cf4f69edf8077e2a5cc2ed"
   },
   {
-    "url": "assets/js/app.7588cf03.js",
-    "revision": "e5e5e025688104e4b43258614c6571d9"
+    "url": "assets/js/app.dc155183.js",
+    "revision": "b2bd20fbe24337c954a581d211de2049"
   },
   {
     "url": "guide/essentials/configuration.html",
-    "revision": "770d3e9805e71dd95c909028614227f2"
+    "revision": "23859413c72904113985f34fdadbfd7c"
   },
   {
     "url": "guide/essentials/installation.html",
-    "revision": "d0427adfd6aa311d7913d153107f2017"
+    "revision": "1d3ac974b5edccf40596d2addadda420"
   },
   {
     "url": "guide/essentials/introduction.html",
-    "revision": "d0e3041901b5cb1a6295b25c5a7fa5e7"
+    "revision": "dfbe9e65a95378887dd4f8d1b2b21a83"
   },
   {
     "url": "guide/essentials/quick-start.html",
-    "revision": "8e90caceb15b2c456226abe1c6d3d69a"
+    "revision": "ae5a05c9159efd8246413a6665228c29"
   },
   {
     "url": "guide/modules/admin-module.html",
-    "revision": "dadfba46bcb711fb52b417de49b0da4c"
+    "revision": "5375f00962fc771e652e4f0fe3ca14d6"
   },
   {
     "url": "guide/modules/creating-own-modules.html",
-    "revision": "048d2fe2b6831226943a9903d132f3e2"
+    "revision": "2015416a939ec358c0b6f7f9652fdb4f"
   },
   {
     "url": "guide/modules/home-page.html",
-    "revision": "aa81f744bd577f91ed3c3979a8e64306"
+    "revision": "442acdc4b7e3c132e6cfe7a5d4e9effd"
   },
   {
     "url": "guide/modules/router.html",
-    "revision": "ead7f1aadde341b39dfc6f9de36a78da"
+    "revision": "f8bb8077cfe2542cfdc46b1366344367"
   },
   {
     "url": "guide/table-management/basics.html",
-    "revision": "d9a4542b0c3d3b0315a29d4ee692dd41"
+    "revision": "8e4f0ef3594159175ac0b32e71912e26"
   },
   {
     "url": "guide/table-management/custom-configuration.html",
-    "revision": "d6157378a4175513832a01121d25f240"
+    "revision": "700e4f933fd41040a216a21676318774"
   },
   {
     "url": "guide/table-management/extended-details.html",
-    "revision": "9a590452ba32427b7db5b25d60e3dc4a"
+    "revision": "57651671f4ef004ef684f1fc04d4ff05"
   },
   {
     "url": "guide/table-management/field-options.html",
-    "revision": "73829d0091e8c88bddd6e55df1d22cab"
+    "revision": "13b6ea356222d59c5fe494eb33a46a8d"
   },
   {
     "url": "guide/table-management/item-elements.html",
-    "revision": "7dcc24c176377b1ff2b6654a471b880a"
+    "revision": "66c3e66a898c93d00b0192cc57db111f"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -236,6 +236,10 @@ self.__precacheManifest = [
     "revision": "f22d501a35a87d9f21701cb031f6ea17"
   },
   {
+    "url": "images/api/login.png",
+    "revision": "3c843f81617ca97a541874317582b9cb"
+  },
+  {
     "url": "images/demo/crud-table.jpg",
     "revision": "44a7f44428ca5c84b2643f498ffe01d7"
   },
@@ -277,7 +281,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "22fc683b11ccea55ef27af26b18b5ae7"
+    "revision": "201182988768ec85b1ae57cae140e152"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
