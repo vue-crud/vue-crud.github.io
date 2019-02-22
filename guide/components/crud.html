@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CRUD | Vue CRUD</title>
+    <meta name="description" content="Vue.js based REST-ful CRUD application">
+    <link rel="icon" href="/images/icon/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.e001c901.css" as="style"><link rel="preload" href="/assets/js/app.5cf046e8.js" as="script"><link rel="preload" href="/assets/js/10.0ccc9e3a.js" as="script"><link rel="prefetch" href="/assets/js/11.5162d36e.js"><link rel="prefetch" href="/assets/js/12.76a96e15.js"><link rel="prefetch" href="/assets/js/13.6218989b.js"><link rel="prefetch" href="/assets/js/14.6ce6b17a.js"><link rel="prefetch" href="/assets/js/15.1c42eba8.js"><link rel="prefetch" href="/assets/js/16.90065742.js"><link rel="prefetch" href="/assets/js/17.23d95347.js"><link rel="prefetch" href="/assets/js/18.bcdcd907.js"><link rel="prefetch" href="/assets/js/19.6ffd2fcd.js"><link rel="prefetch" href="/assets/js/2.b158a7c3.js"><link rel="prefetch" href="/assets/js/20.2f6543e3.js"><link rel="prefetch" href="/assets/js/21.5a6be2a6.js"><link rel="prefetch" href="/assets/js/22.9422017c.js"><link rel="prefetch" href="/assets/js/23.cfda8867.js"><link rel="prefetch" href="/assets/js/24.26561dd0.js"><link rel="prefetch" href="/assets/js/25.b11fbd9d.js"><link rel="prefetch" href="/assets/js/26.2e1afef3.js"><link rel="prefetch" href="/assets/js/27.39ff9301.js"><link rel="prefetch" href="/assets/js/28.ab104a43.js"><link rel="prefetch" href="/assets/js/3.84f77157.js"><link rel="prefetch" href="/assets/js/4.ac638f8f.js"><link rel="prefetch" href="/assets/js/5.b689dcf1.js"><link rel="prefetch" href="/assets/js/6.d2ae8291.js"><link rel="prefetch" href="/assets/js/7.40692d27.js"><link rel="prefetch" href="/assets/js/8.ddb8d2f7.js"><link rel="prefetch" href="/assets/js/9.f4a2559e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e001c901.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo/vue-crud-sm.png" alt="Vue CRUD" class="logo"> <span class="site-name can-hide">Vue CRUD</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/essentials/introduction.html" class="nav-link">Guide</a></div><div class="nav-item"><a href="/api/rest/getting-started.html" class="nav-link">API</a></div><div class="nav-item"><a href="/guide/essentials/introduction.html#demo-version" class="nav-link">Demo</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Ecosystem</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuetifyjs.com/en/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuetify
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Laravel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://github.com/szczepanmasny/vue-crud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/essentials/introduction.html" class="nav-link">Guide</a></div><div class="nav-item"><a href="/api/rest/getting-started.html" class="nav-link">API</a></div><div class="nav-item"><a href="/guide/essentials/introduction.html#demo-version" class="nav-link">Demo</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Ecosystem</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuetifyjs.com/en/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuetify
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Laravel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://github.com/szczepanmasny/vue-crud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading"><span>Essentials</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/guide/essentials/introduction.html" class="sidebar-link">Introduction</a></li><li><a href="/guide/essentials/installation.html" class="sidebar-link">Installation</a></li><li><a href="/guide/essentials/configuration.html" class="sidebar-link">Configuration</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>Components</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/guide/components/auth.html" class="sidebar-link">Authentication</a></li><li><a href="/guide/components/app.html" class="sidebar-link">Application layout</a></li><li><a href="/guide/components/crud.html" class="active sidebar-link">CRUD</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/components/crud.html#crud-component" class="sidebar-link">CRUD component</a></li><li class="sidebar-sub-header"><a href="/guide/components/crud.html#extended-details" class="sidebar-link">Extended details</a></li><li class="sidebar-sub-header"><a href="/guide/components/crud.html#children" class="sidebar-link">Children</a></li></ul></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>CRUD</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/guide/crud/basics.html" class="sidebar-link">Basics</a></li><li><a href="/guide/crud/custom-configuration.html" class="sidebar-link">Custom configuration</a></li><li><a href="/guide/crud/field-options.html" class="sidebar-link">Field options</a></li><li><a href="/guide/crud/extended-details.html" class="sidebar-link">Extended details</a></li><li><a href="/guide/crud/item-elements.html" class="sidebar-link">Item Elements</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>Cookbook</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/guide/cookbook/getting-started.html" class="sidebar-link">Getting started</a></li><li><a href="/guide/cookbook/authentication.html" class="sidebar-link">Authentication</a></li><li><a href="/guide/cookbook/application-layout.html" class="sidebar-link">Application layout</a></li><li><a href="/guide/cookbook/routing.html" class="sidebar-link">Routing</a></li><li><a href="/guide/cookbook/modules.html" class="sidebar-link">Modules</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="crud"><a href="#crud" aria-hidden="true" class="header-anchor">#</a> CRUD</h1> <h2 id="crud-component"><a href="#crud-component" aria-hidden="true" class="header-anchor">#</a> CRUD component</h2> <h4 id="import"><a href="#import" aria-hidden="true" class="header-anchor">#</a> Import:</h4> <p><strong>import Crud from '@/utils/crud/components/Crud.vue'</strong></p> <h4 id="props"><a href="#props" aria-hidden="true" class="header-anchor">#</a> Props:</h4> <div class="language-js extra-class"><pre class="language-js"><code>prefix<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+path<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+fieldsInfo<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+detailsTitle<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+pageTitle<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+editButton<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+deleteMode<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  validator<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'none'</span><span class="token punctuation">,</span> <span class="token string">'soft'</span><span class="token punctuation">,</span> <span class="token string">'hard'</span><span class="token punctuation">,</span> <span class="token string">'both'</span><span class="token punctuation">,</span> <span class="token string">'filter'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'soft'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+customHeaderButtons<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+customButtons<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+itemElements<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Object<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+watchForCreation<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+primaryKey<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'id'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+activeColumnName<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'active'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+mode<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  validator<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'ClientSide'</span><span class="token punctuation">,</span> <span class="token string">'ServerSide'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'ClientSide'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+creator<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+editor<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h4 id="example"><a href="#example" aria-hidden="true" class="header-anchor">#</a> Example:</h4> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>crud</span>
+    <span class="token attr-name">:meta</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>meta<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:fileMode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:prefix</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>prefix<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>path<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:pageTitle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pageTitle<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:fieldsInfo</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fieldsInfo<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:detailsTitle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$t(<span class="token punctuation">'</span>detailsTitle<span class="token punctuation">'</span>)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>crud</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+  <span class="token keyword">import</span> Crud <span class="token keyword">from</span> <span class="token string">'@/utils/crud/components/Crud.vue'</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        prefix<span class="token punctuation">:</span> <span class="token string">'crm'</span><span class="token punctuation">,</span>
+        path<span class="token punctuation">:</span> <span class="token string">'company-files'</span><span class="token punctuation">,</span>
+        pageTitle<span class="token punctuation">:</span> <span class="token string">'crm.companyFiles'</span><span class="token punctuation">,</span>
+        meta<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'path'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token function">fieldsInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            text<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'fields.id'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">:</span> <span class="token string">'id'</span><span class="token punctuation">,</span>
+            details<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            type<span class="token punctuation">:</span> <span class="token string">'select'</span><span class="token punctuation">,</span>
+            url<span class="token punctuation">:</span> <span class="token string">'crm/companies'</span><span class="token punctuation">,</span>
+            list<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              value<span class="token punctuation">:</span> <span class="token string">'id'</span><span class="token punctuation">,</span>
+              text<span class="token punctuation">:</span> <span class="token string">'common_name'</span><span class="token punctuation">,</span>
+              data<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            column<span class="token punctuation">:</span> <span class="token string">'company_id'</span><span class="token punctuation">,</span>
+            text<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'fields.company'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">:</span> <span class="token string">'company'</span><span class="token punctuation">,</span>
+            apiObject<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              name<span class="token punctuation">:</span> <span class="token string">'company.common_name'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            type<span class="token punctuation">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span>
+            column<span class="token punctuation">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span>
+            text<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'fields.file'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span>
+            textMode<span class="token punctuation">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span>
+            multiedit<span class="token punctuation">:</span> <span class="token boolean">false</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            type<span class="token punctuation">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span>
+            column<span class="token punctuation">:</span> <span class="token string">'file_2'</span><span class="token punctuation">,</span>
+            text<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'fields.file2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">:</span> <span class="token string">'file_2'</span><span class="token punctuation">,</span>
+            textMode<span class="token punctuation">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span>
+            multiedit<span class="token punctuation">:</span> <span class="token boolean">false</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            type<span class="token punctuation">:</span> <span class="token string">'textarea'</span><span class="token punctuation">,</span>
+            column<span class="token punctuation">:</span> <span class="token string">'description'</span><span class="token punctuation">,</span>
+            text<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span><span class="token string">'fields.description'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">:</span> <span class="token string">'description'</span><span class="token punctuation">,</span>
+            required<span class="token punctuation">:</span> <span class="token boolean">false</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      Crud
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    i18n<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      messages<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        en<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          detailsTitle<span class="token punctuation">:</span> <span class="token string">'File'</span><span class="token punctuation">,</span>
+          fields<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            id<span class="token punctuation">:</span> <span class="token string">'Id'</span><span class="token punctuation">,</span>
+            company<span class="token punctuation">:</span> <span class="token string">'Company'</span><span class="token punctuation">,</span>
+            file<span class="token punctuation">:</span> <span class="token string">'File'</span><span class="token punctuation">,</span>
+            file2<span class="token punctuation">:</span> <span class="token string">'File 2'</span><span class="token punctuation">,</span>
+            description<span class="token punctuation">:</span> <span class="token string">'Description'</span><span class="token punctuation">,</span>
+            type<span class="token punctuation">:</span> <span class="token string">'File type'</span><span class="token punctuation">,</span>
+            size<span class="token punctuation">:</span> <span class="token string">'Size'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="extended-details"><a href="#extended-details" aria-hidden="true" class="header-anchor">#</a> Extended details</h2> <h4 id="import-2"><a href="#import-2" aria-hidden="true" class="header-anchor">#</a> Import:</h4> <p><strong>import ItemDetailsContainer from &quot;@/utils/crud/components/ItemDetailsContainer.vue&quot;</strong></p> <p><strong>import ItemDetailsContainerMixin from &quot;@/utils/crud/mixins/item-details-container.js&quot;</strong></p> <h4 id="props-2"><a href="#props-2" aria-hidden="true" class="header-anchor">#</a> Props:</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'fields'</span><span class="token punctuation">,</span>
+<span class="token string">'basicInformation'</span><span class="token punctuation">,</span>
+<span class="token string">'title'</span>
+</code></pre></div><h4 id="example-2"><a href="#example-2" aria-hidden="true" class="header-anchor">#</a> Example:</h4> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item-details-container</span> <span class="token attr-name">:title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$t(<span class="token punctuation">'</span>title<span class="token punctuation">'</span>)<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:fields</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fields<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:basicInformation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$t(<span class="token punctuation">'</span>basicInformation<span class="token punctuation">'</span>)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- Slot - tabs on right side --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-tab</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>positions<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ripple</span><span class="token punctuation">&gt;</span></span>{{ $t('positions') }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-tab</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-tab</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>comments<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ripple</span><span class="token punctuation">&gt;</span></span>{{ $t('comments') }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-tab</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- Positions --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-tab-item</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>positions<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-tab-item</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- Comments --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-tab-item</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>comments<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-tab-item</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>item-details-container</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+  <span class="token keyword">import</span> ItemDetailsContainer <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/components/ItemDetailsContainer.vue&quot;</span>
+  <span class="token keyword">import</span> ItemDetailsContainerMixin <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/mixins/item-details-container.js&quot;</span>
+
+  <span class="token comment">// Component to fill tabs on the right side</span>
+  <span class="token keyword">import</span> CompanyPositions <span class="token keyword">from</span> <span class="token string">'./CompanyPositions.vue'</span>
+  <span class="token keyword">import</span> CompanyComments <span class="token keyword">from</span> <span class="token string">'./CompanyComments.vue'</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    mixins<span class="token punctuation">:</span> <span class="token punctuation">[</span>ItemDetailsContainerMixin<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      ItemDetailsContainer<span class="token punctuation">,</span>
+      CompanyPositions<span class="token punctuation">,</span>
+      CompanyComments<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setIdColumn</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    i18n<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      messages<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        pl<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">'Szczegóły firmy'</span><span class="token punctuation">,</span>
+          basicInformation<span class="token punctuation">:</span> <span class="token string">'Dane podstawowe'</span><span class="token punctuation">,</span>
+          positions<span class="token punctuation">:</span> <span class="token string">'Stanowiska'</span><span class="token punctuation">,</span>
+          comments<span class="token punctuation">:</span> <span class="token string">'Komentarze'</span><span class="token punctuation">,</span>
+          files<span class="token punctuation">:</span> <span class="token string">'Pliki'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        en<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">'Company details'</span><span class="token punctuation">,</span>
+          basicInformation<span class="token punctuation">:</span> <span class="token string">'Basic information'</span><span class="token punctuation">,</span>
+          positions<span class="token punctuation">:</span> <span class="token string">'Positions'</span><span class="token punctuation">,</span>
+          comments<span class="token punctuation">:</span> <span class="token string">'Comments'</span><span class="token punctuation">,</span>
+          files<span class="token punctuation">:</span> <span class="token string">'Files'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="children"><a href="#children" aria-hidden="true" class="header-anchor">#</a> Children</h2> <h4 id="import-3"><a href="#import-3" aria-hidden="true" class="header-anchor">#</a> Import:</h4> <p><strong>import CompanyPositionsChildMixin from &quot;@/utils/crud/mixins/child.js&quot;</strong></p> <p><strong>import ChildrenTable from &quot;@/utils/crud/components/ChildrenTable.vue&quot;</strong></p> <p><strong>import ChildDetails from &quot;@/utils/crud/components/ChildDetails.vue&quot;</strong></p> <h4 id="example-3"><a href="#example-3" aria-hidden="true" class="header-anchor">#</a> Example:</h4> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>company-positions-table</span>
+        <span class="token attr-name">:fieldsInfo</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fileteredTableFields<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:detailsLoader</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>detailsLoader<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:tableData</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>childrenList(fileteredTableFields, [], <span class="token punctuation">'</span>id<span class="token punctuation">'</span>, childItemName, <span class="token punctuation">'</span>active<span class="token punctuation">'</span>)<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">deleteMode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>both<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:itemElements</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>itemElements<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>company-positions-table</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>company-position-details</span> <span class="token attr-name">:details</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>details<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:fieldsInfo</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fileteredDetailsFields<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>company-position-details</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>company-position-tasks</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>company-position-tasks</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token keyword">import</span> FieldsInfoMixin <span class="token keyword">from</span> <span class="token string">'../../positions/mixins/fields.js'</span>
+<span class="token keyword">import</span> LocalesMixin <span class="token keyword">from</span> <span class="token string">'../../positions/mixins/locales.js'</span>
+<span class="token keyword">import</span> ChildElementsMixin <span class="token keyword">from</span> <span class="token string">&quot;../../positions/mixins/item-elements.js&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> CompanyPositionsChildMixin <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/mixins/child.js&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ChildrenTable <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/components/ChildrenTable.vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ChildDetails <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/components/ChildDetails.vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ItemElements <span class="token keyword">from</span> <span class="token string">'@/utils/crud/components/ItemElements.vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  mixins<span class="token punctuation">:</span> <span class="token punctuation">[</span>FieldsInfoMixin<span class="token punctuation">,</span> LocalesMixin<span class="token punctuation">,</span> ChildElementsMixin<span class="token punctuation">,</span> CompanyPositionsChildMixin<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;company-positions-table&quot;</span><span class="token punctuation">:</span> ChildrenTable<span class="token punctuation">,</span>
+    <span class="token string">&quot;company-position-details&quot;</span><span class="token punctuation">:</span> ChildDetails<span class="token punctuation">,</span>
+    <span class="token string">&quot;company-position-tasks&quot;</span><span class="token punctuation">:</span> ItemElements
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="children-table"><a href="#children-table" aria-hidden="true" class="header-anchor">#</a> Children table</h3> <h4 id="import-4"><a href="#import-4" aria-hidden="true" class="header-anchor">#</a> Import:</h4> <p><strong>import ChildrenTable from &quot;@/utils/crud/components/ChildrenTable.vue&quot;</strong></p> <h4 id="props-3"><a href="#props-3" aria-hidden="true" class="header-anchor">#</a> Props:</h4> <div class="language-js extra-class"><pre class="language-js"><code>title<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+fieldsInfo<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+deleteMode<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  validator<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'none'</span><span class="token punctuation">,</span> <span class="token string">'soft'</span><span class="token punctuation">,</span> <span class="token string">'hard'</span><span class="token punctuation">,</span> <span class="token string">'both'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'soft'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+customHeaderButtons<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+customButtons<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+itemElements<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Object<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+createButton<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+editButton<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+primaryKey<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">&quot;id&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+tableData<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+detailsLoader<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="example-4"><a href="#example-4" aria-hidden="true" class="header-anchor">#</a> Example:</h4> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>company-positions-table</span>
+        <span class="token attr-name">:fieldsInfo</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fileteredTableFields<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:detailsLoader</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>detailsLoader<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:tableData</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>childrenList(fileteredTableFields, [], <span class="token punctuation">'</span>id<span class="token punctuation">'</span>, childItemName, <span class="token punctuation">'</span>active<span class="token punctuation">'</span>)<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">deleteMode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>both<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>company-positions-table</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token keyword">import</span> FieldsInfoMixin <span class="token keyword">from</span> <span class="token string">'../../positions/mixins/fields.js'</span>
+<span class="token keyword">import</span> LocalesMixin <span class="token keyword">from</span> <span class="token string">'../../positions/mixins/locales.js'</span>
+<span class="token keyword">import</span> CompanyPositionsChildMixin <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/mixins/child.js&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ChildrenTable <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/components/ChildrenTable.vue&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  mixins<span class="token punctuation">:</span> <span class="token punctuation">[</span>FieldsInfoMixin<span class="token punctuation">,</span> LocalesMixin<span class="token punctuation">,</span> CompanyPositionsChildMixin<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;company-positions-table&quot;</span><span class="token punctuation">:</span> ChildrenTable<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="child-details"><a href="#child-details" aria-hidden="true" class="header-anchor">#</a> Child details</h3> <h4 id="import-5"><a href="#import-5" aria-hidden="true" class="header-anchor">#</a> Import:</h4> <p><strong>import ChildrenTable from &quot;@/utils/crud/components/ChildrenTable.vue&quot;</strong></p> <h4 id="props-4"><a href="#props-4" aria-hidden="true" class="header-anchor">#</a> Props:</h4> <div class="language-js extra-class"><pre class="language-js"><code>details<span class="token punctuation">:</span> Object<span class="token punctuation">,</span>
+fieldsInfo<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+</code></pre></div><h4 id="example-5"><a href="#example-5" aria-hidden="true" class="header-anchor">#</a> Example:</h4> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>company-position-details</span> <span class="token attr-name">:details</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>details<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:fieldsInfo</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fileteredDetailsFields<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>company-position-details</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token keyword">import</span> FieldsInfoMixin <span class="token keyword">from</span> <span class="token string">'../../positions/mixins/fields.js'</span>
+<span class="token keyword">import</span> LocalesMixin <span class="token keyword">from</span> <span class="token string">'../../positions/mixins/locales.js'</span>
+<span class="token keyword">import</span> CompanyPositionsChildMixin <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/mixins/child.js&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ChildDetails <span class="token keyword">from</span> <span class="token string">&quot;@/utils/crud/components/ChildDetails.vue&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  mixins<span class="token punctuation">:</span> <span class="token punctuation">[</span>FieldsInfoMixin<span class="token punctuation">,</span> LocalesMixin<span class="token punctuation">,</span> CompanyPositionsChildMixin<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;company-position-details&quot;</span><span class="token punctuation">:</span> ChildDetails<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/guide/components/app.html" class="prev">
+          Application layout
+        </a></span> <span class="next"><a href="/guide/crud/basics.html">
+          Basics
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.5cf046e8.js" defer></script><script src="/assets/js/10.0ccc9e3a.js" defer></script>
+  </body>
+</html>
