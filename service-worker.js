@@ -21,23 +21,23 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "904787d5de7d6d49ee9e67cbaa38afe1"
+    "revision": "328ce675bf348717ffb1c03114f2fd06"
   },
   {
     "url": "api/rest/authentication.html",
-    "revision": "6f97073a067bd6509fa7ad570b7fa731"
+    "revision": "cb3d7861519181f7d41abcc8c0f96d20"
   },
   {
     "url": "api/rest/crud.html",
-    "revision": "c1d3af15d4c5be336a9e6ea66dafa5ac"
+    "revision": "0b790de8e1cb0532fd2558a57996cfc6"
   },
   {
     "url": "api/rest/getting-started.html",
-    "revision": "61644dc1a15cb9bba2609b3293f22b36"
+    "revision": "67f552b4f0901773b8e0cd893f6ab473"
   },
   {
     "url": "api/rest/profile.html",
-    "revision": "1103bbd9c8b6a05b0468103e95d3e857"
+    "revision": "272e1435d17b9f352fb13a93e62796f4"
   },
   {
     "url": "assets/css/0.styles.e001c901.css",
@@ -104,8 +104,8 @@ self.__precacheManifest = [
     "revision": "9b909c5d53143204f9bda3f06460cefd"
   },
   {
-    "url": "assets/js/23.1f833f3e.js",
-    "revision": "3f2a917ce5bd71215a4d98cd08b67753"
+    "url": "assets/js/23.de23dd85.js",
+    "revision": "273d48e7d408680d740421756b2b0955"
   },
   {
     "url": "assets/js/24.26561dd0.js",
@@ -156,88 +156,88 @@ self.__precacheManifest = [
     "revision": "e9ae094bd5f560f262dae40b84d718b4"
   },
   {
-    "url": "assets/js/app.d7b15b9d.js",
-    "revision": "78fd3b5a41a881198526dfb866d55b6e"
+    "url": "assets/js/app.36991305.js",
+    "revision": "0ac73d2fa9021bdb7c51c3cc726becb9"
   },
   {
     "url": "guide/components/app.html",
-    "revision": "9e848cbee5eb0b6831ff0df1f00de465"
+    "revision": "0c73c4cac6f81de0c93d769b910c6052"
   },
   {
     "url": "guide/components/auth.html",
-    "revision": "fa4754addfd4dbad8c8f8dc3f41f0f76"
+    "revision": "b10a9226f4d557c2a7744da016e13097"
   },
   {
     "url": "guide/components/crud.html",
-    "revision": "07cbd14ad9d438ba64bef6b884f9c8d3"
+    "revision": "01b1375d4ab7d0cbc60128cab8a6d7bd"
   },
   {
     "url": "guide/cookbook/application-layout.html",
-    "revision": "3d9bc192604b18ea08dc1f8bf3ef2e9d"
+    "revision": "a8f0791ece682641027ddd1f8af37f39"
   },
   {
     "url": "guide/cookbook/authentication.html",
-    "revision": "562e8ac53678a03391e8b86a1045ee3f"
+    "revision": "fdb79af3adf2973719450576bf1998cb"
   },
   {
     "url": "guide/cookbook/getting-started.html",
-    "revision": "8e3513f7153b697329ea02702e3071f7"
+    "revision": "42d6fa5808fb8442f79740c084d55209"
   },
   {
     "url": "guide/cookbook/modules.html",
-    "revision": "2fc149a73a1ee4f2b930a0d11e29055b"
+    "revision": "ed9846043cedd48dea2bf5d9df8024dc"
   },
   {
     "url": "guide/cookbook/routing.html",
-    "revision": "ee50d54bc142dcfd79e590290e331de8"
+    "revision": "68d3fb0f674d059aec038cc0968f37f6"
   },
   {
     "url": "guide/crud/basics.html",
-    "revision": "9ebf59efab746b322113668303143b03"
+    "revision": "d81289c3673d771e33656f235f9d9c65"
   },
   {
     "url": "guide/crud/custom-configuration.html",
-    "revision": "d3913596a2d42685d52d1d55544d5361"
+    "revision": "937270132b8d272e311c60337e2e2a59"
   },
   {
     "url": "guide/crud/extended-details.html",
-    "revision": "8ddc66123e4e713a0844b63203c5262c"
+    "revision": "1e19ea59957590cbf273cfd8d14c9593"
   },
   {
     "url": "guide/crud/field-options.html",
-    "revision": "c8e335b9d09ebd3fa5a83ba178eb0dba"
+    "revision": "d28c9f6c395b481c4ef99fa6ffa99829"
   },
   {
     "url": "guide/crud/item-elements.html",
-    "revision": "2a9df7ebd3fca773821855d65bd73ff1"
+    "revision": "efad0ed43df1d799d6ddab9832c36f1c"
   },
   {
     "url": "guide/essentials/configuration.html",
-    "revision": "022fc79681f0edec60dfabd401aca519"
+    "revision": "1a96072692e651056ee821fe2e1b562c"
   },
   {
     "url": "guide/essentials/installation.html",
-    "revision": "68deeb258ff5bc90d783a3a99c1c92d2"
+    "revision": "bd46fcb0826d908d54fb9e39b2111b3a"
   },
   {
     "url": "guide/essentials/introduction.html",
-    "revision": "b41357ca0d9cdcce8e2a2476a01a39bf"
+    "revision": "5c6f14fa948db02fab98f99328512408"
   },
   {
     "url": "guide/modules/admin-module.html",
-    "revision": "aa5be62882e7e0b451b8b3d63809e194"
+    "revision": "cbf0043f0f9541d41e595e39466cb666"
   },
   {
     "url": "guide/modules/creating-own-modules.html",
-    "revision": "d1d68e294f3c6191ebca77c834e12f23"
+    "revision": "77fb12dc322222db716afceb42809734"
   },
   {
     "url": "guide/modules/home-page.html",
-    "revision": "c4aa5fc73a9d3afce11d157432f4ae91"
+    "revision": "f5b449b38059a3913ca53c2e4bb0c018"
   },
   {
     "url": "guide/modules/router.html",
-    "revision": "97b77b44014f25fb07990038f2ff17bf"
+    "revision": "a1997924f216b0110114c605433fc430"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -337,7 +337,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e04d2b019fa721d369c9c94d9c48a080"
+    "revision": "00caff9d43ab6d7a9528c64bfaad41ba"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
