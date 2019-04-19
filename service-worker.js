@@ -21,23 +21,23 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "9e7f2e22570e5d715b30c8a55f345dfa"
+    "revision": "4c10dc2ad6c3d20bd708b7fbe2eca313"
   },
   {
     "url": "api/rest/authentication.html",
-    "revision": "b77a1b142bf905c9afdebd1f443052dd"
+    "revision": "3a388e123b54d1398bc225de2b45c34d"
   },
   {
     "url": "api/rest/crud.html",
-    "revision": "b194e4aa6376ad846b04792e14f93728"
+    "revision": "b844c6341b92d0bd0097a79990e1cfb6"
   },
   {
     "url": "api/rest/getting-started.html",
-    "revision": "cedbf0e4ee934b508ba95520f698d72a"
+    "revision": "4d2e0c3b7bcfae2f7d9b50a447fb6fca"
   },
   {
     "url": "api/rest/profile.html",
-    "revision": "c7333e47a311410e23f89ad99fba2acd"
+    "revision": "407c2a0fc130979aed783adce3ad4814"
   },
   {
     "url": "assets/css/0.styles.e001c901.css",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "revision": "83621669651b9a3d4bf64d1a670ad856"
   },
   {
-    "url": "assets/js/10.0ccc9e3a.js",
-    "revision": "8aacc7f4c22bfb7e941c1ab85459151a"
+    "url": "assets/js/10.1dce168e.js",
+    "revision": "0ecc1ea3fb533fa6f5b551c1098e8784"
   },
   {
     "url": "assets/js/11.5162d36e.js",
@@ -96,16 +96,16 @@ self.__precacheManifest = [
     "revision": "dd33b7d8bb53f3ac35e56d0234eead76"
   },
   {
-    "url": "assets/js/21.33ff2499.js",
-    "revision": "1cd79f4df57dd5903b921b5d03c474ce"
+    "url": "assets/js/21.ffc218bd.js",
+    "revision": "121b917853eef6577dc282403adfa4e9"
   },
   {
-    "url": "assets/js/22.196b1393.js",
-    "revision": "9b909c5d53143204f9bda3f06460cefd"
+    "url": "assets/js/22.8d35b3e2.js",
+    "revision": "44396634f2209e58d50e31061000e2a8"
   },
   {
-    "url": "assets/js/23.08e053ae.js",
-    "revision": "d6712153c4ddca7828b72b8f5f9bb498"
+    "url": "assets/js/23.f98fdd3a.js",
+    "revision": "9dfc18591521383dbf75002a7c8c5c76"
   },
   {
     "url": "assets/js/24.26561dd0.js",
@@ -156,88 +156,88 @@ self.__precacheManifest = [
     "revision": "e9ae094bd5f560f262dae40b84d718b4"
   },
   {
-    "url": "assets/js/app.52274030.js",
-    "revision": "73dbfcdb9a86451542b12ecb60f6862a"
+    "url": "assets/js/app.ff45a90a.js",
+    "revision": "58ec4bc97e857ef6fd9f0cf66f1e3003"
   },
   {
     "url": "guide/components/app.html",
-    "revision": "0d0677259a4cba4bfda72fcacb1dab10"
+    "revision": "1cd3f3ceff1605e49881775d8fef28bb"
   },
   {
     "url": "guide/components/auth.html",
-    "revision": "a590a1e21ab3b75df627a169eaabe005"
+    "revision": "61dc4064236c684a8a6bf88fea8153a6"
   },
   {
     "url": "guide/components/crud.html",
-    "revision": "7e673f75c95819159191efe371adb242"
+    "revision": "1150f629b40ec54a18a35c00a47ae2ef"
   },
   {
     "url": "guide/cookbook/application-layout.html",
-    "revision": "59eae52824f7e85982e29f4076462463"
+    "revision": "37eddad5ed10b2b55f92c02b72ac0cfb"
   },
   {
     "url": "guide/cookbook/authentication.html",
-    "revision": "bc2b8c0a8da36bf7be759ebf7338c8c3"
+    "revision": "edcd1f1af310acc502becab3b09d115b"
   },
   {
     "url": "guide/cookbook/getting-started.html",
-    "revision": "f66b69f5e00751e16ffe341ac1daec7b"
+    "revision": "3d141c3debb7e5af40ef45c41d4f90a7"
   },
   {
     "url": "guide/cookbook/modules.html",
-    "revision": "dbee412c239ee78afbb14908e7a5ac23"
+    "revision": "002cf7c55f8e37c31d4e265266cf4a77"
   },
   {
     "url": "guide/cookbook/routing.html",
-    "revision": "ada4577fc43007ccc164168d398a61cc"
+    "revision": "1cce7e1ecec16c1fa6f6d7695469a9c4"
   },
   {
     "url": "guide/crud/basics.html",
-    "revision": "451655e900d90f55ffe189a5d705d704"
+    "revision": "2ab6347e4ad91da3c78afa90d81670bc"
   },
   {
     "url": "guide/crud/custom-configuration.html",
-    "revision": "a2c31efaa3ff5a9e74046811ac387c82"
+    "revision": "7f27969b0dbf3c4f2af4da1e76a55fee"
   },
   {
     "url": "guide/crud/extended-details.html",
-    "revision": "316365dc42bc70a036d8df2c5e6a5ca0"
+    "revision": "a5647e6ff8bcf4b484feb0d0346cc8cf"
   },
   {
     "url": "guide/crud/field-options.html",
-    "revision": "c73b069792d6cf288a1cd8d8d4657581"
+    "revision": "9a90b954d2a257b7b5cde0dfb51285f8"
   },
   {
     "url": "guide/crud/item-elements.html",
-    "revision": "31ae9d219316326de74356b46c2eed95"
+    "revision": "65a3e20ba0f65581e58726909c63870e"
   },
   {
     "url": "guide/essentials/configuration.html",
-    "revision": "925089e06412c4e271a37903dca184b3"
+    "revision": "907b50df0f0b0f14cab697d6add054a6"
   },
   {
     "url": "guide/essentials/installation.html",
-    "revision": "5937a5c9895f02c84d5d7506258385c7"
+    "revision": "ee91b07bad285d871183387d01af8017"
   },
   {
     "url": "guide/essentials/introduction.html",
-    "revision": "33647c91e0167ed5114982c0bc742310"
+    "revision": "23833cc7bb481cfd4f7fea6475e3a72f"
   },
   {
     "url": "guide/modules/admin-module.html",
-    "revision": "40c127df6262d4a17c35fc9df4ddbea8"
+    "revision": "cde6351a739716b88255eacb0dbd7dcd"
   },
   {
     "url": "guide/modules/creating-own-modules.html",
-    "revision": "a0011d8b9f5dcbddc96c45085f19c6c0"
+    "revision": "fda310b409c13f1303d41d7c4e5330a1"
   },
   {
     "url": "guide/modules/home-page.html",
-    "revision": "bdb34f92c709afdfd70e2973da1e27e3"
+    "revision": "8b45cf8a6f18092ec00102622fc37408"
   },
   {
     "url": "guide/modules/router.html",
-    "revision": "14d514c7bf1c0152ba4b183c6248e12d"
+    "revision": "ca21d1ffbb3a2ea6d3df5d9e5f0efb16"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -337,7 +337,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9d54783ef1d8d3841eee6d16da6f08ff"
+    "revision": "c9ac7dab351ebc6f04f6856faf3abd36"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
